@@ -2,9 +2,22 @@
   --color-background: #f5f3ee;
   --color-foreground: #292e28;
   --color-card: #fff;
+  --color-card-foreground: #292e28;
+  --color-popover: #fff;
+  --color-popover-foreground: #292e28;
   --color-muted-foreground: #74786f;
   --color-primary: #3c503b;
+  --color-primary-foreground: #fff;
+  --color-secondary: #e9ece3;
+  --color-secondary-foreground: #292e28;
+  --color-muted: #eeefe7;
+  --color-accent: #dce3d3;
+  --color-accent-foreground: #292e28;
   --color-border: #deded5;
+  --color-input: #c9cfc0;
+  --color-ring: #69835d;
+  --color-shell: #f5f3ee;
+  --color-shell-panel: #fff;
 }
 .atelier {
   background: #f5f3ee;
