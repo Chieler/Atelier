@@ -1,49 +1,85 @@
-/**
- * Landing page — a STATIC page.
- *
- * It lives at the top level of src/pages/ (not under (app)/), so it renders
- * with no DeepSpace providers: no auth session fetch, no records WebSocket.
- * That makes it cheap to serve and safe for logged-out / crawler traffic.
- *
- * Need live data or auth here? Move this file to src/pages/(app)/index.tsx
- * and it becomes a dynamic page. Conversely, any page you want to keep static
- * (marketing, docs, legal) belongs at this top level.
- *
- * Top-level pages are also prerendered to static HTML at build
- * (prerender.ts, via vite.config.ts) so crawlers read real content.
- * Keep them renderable without a browser: no window/document during render,
- * prose in HTML text, reveal animations in CSS keyframes rather than JS-driven
- * initial states. `<Seo>` comes first and reads src/seo.ts.
- */
-
 import { Link } from 'react-router-dom'
+import { ArrowUpRight, Asterisk } from 'lucide-react'
 import { Seo } from '../components/Seo'
-import { APP_NAME } from '../constants'
 import { seo } from '../seo'
-
 export default function Landing() {
   return (
     <>
       <Seo {...seo} path="/" />
-      <div
-        data-testid="static-landing"
-        className="flex min-h-screen flex-col items-center justify-center px-6 text-center"
-      >
-        <p className="mb-3 text-sm uppercase tracking-widest text-muted-foreground">{APP_NAME}</p>
-        <h1 className="mb-4 max-w-2xl text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          A DeepSpace app with a static front door
-        </h1>
-        <p className="mb-8 max-w-md text-muted-foreground">
-          This landing page ships no auth call and no realtime connection — it's a
-          plain static page. The live app, with sign-in and synced data, lives
-          behind the link below.
-        </p>
-        <Link
-          to="/home"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-        >
-          Enter the app
-        </Link>
+      <div className="atelier landing">
+        <header className="studio-header">
+          <Link className="brand" to="/">
+            <Asterisk size={27} />
+            <span>
+              atelier<span className="brand-dot">.</span>
+            </span>
+          </Link>
+          <span className="header-note">
+            A shared canvas for people & agents
+          </span>
+          <Link
+            className="text-button"
+            style={{ marginLeft: 'auto' }}
+            to="/home"
+          >
+            Enter the studio <ArrowUpRight size={15} />
+          </Link>
+        </header>
+        <main className="landing-main">
+          <div className="landing-copy">
+            <div className="eyebrow">AN OPEN STUDIO FOR AGENTIC DRAWING</div>
+            <h1>
+              Put your agents
+              <br />
+              <em>in the picture.</em>
+            </h1>
+            <p>
+              Set a direction. Watch the canvas take shape.
+              <br />
+              Leave a note that makes the next pass better.
+            </p>
+            <Link className="dark-button" to="/home">
+              Enter the studio <ArrowUpRight size={16} />
+            </Link>
+            <div className="landing-footnote">
+              Bring your own agent. Keep the whole process.
+            </div>
+          </div>
+          <figure className="landing-art">
+            <div className="art-mat">
+              <img
+                src="/example.svg"
+                alt="A rust-colored fox crossing a moonlit forest ravine, drawn with layered vector shapes"
+              />
+            </div>
+            <figcaption>
+              <span>Moonlit crossing</span>
+              <span>A saved agent drawing experiment · SVG</span>
+            </figcaption>
+          </figure>
+        </main>
+        <div className="landing-steps">
+          <div>
+            <span>01 / DIRECTION</span>
+            <h2>Start with a point of view.</h2>
+            <p>A brief and style guide give your agents somewhere to begin.</p>
+          </div>
+          <div>
+            <span>02 / CONVERSATION</span>
+            <h2>Keep feedback in the room.</h2>
+            <p>Your notes and their drawing batches share one workspace.</p>
+          </div>
+          <div>
+            <span>03 / PROCESS</span>
+            <h2>Every pass has a place.</h2>
+            <p>
+              Inspect earlier revisions and export the work as editable SVG.
+            </p>
+          </div>
+        </div>
+        <footer className="landing-footer">
+          A small collaborative studio, built on DeepSpace.
+        </footer>
       </div>
     </>
   )
