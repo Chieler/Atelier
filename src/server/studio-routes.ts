@@ -1,36 +1,30 @@
 import type { Hono } from 'hono'
-import type { AppContext } from '../../worker'
+import type { AppContext, Env } from '../../worker'
 import { replay, svg, type DrawingBatch, type Envelope } from '../studio/model'
+
+export function studioRecordTools(env: Env, userId: string) {
+  const stub = env.RECORD_ROOMS.get(env.RECORD_ROOMS.idFromName(`app:${env.DEEPSPACE_APP_ID}`))
+  return async function execute<T>(tool: string, params: Record<string, unknown>) {
+    const response = await stub.fetch(
+      new Request('https://internal/api/tools/execute', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-User-Id': userId,
+          'X-App-Action': 'true',
+        },
+        body: JSON.stringify({ tool, params }),
+      }),
+    )
+    return response.json() as Promise<{ success: boolean; data?: T; error?: string }>
+  }
+}
 /** Public read surface; never forwards request-supplied identity. */
 export function registerStudioRoutes(app: Hono<AppContext>) {
   app.get('/api/studios/:roomId/view.svg', async (c) => {
     const roomId = c.req.param('roomId')
-    const stub = c.env.RECORD_ROOMS.get(
-      c.env.RECORD_ROOMS.idFromName(`app:${c.env.DEEPSPACE_APP_ID}`),
-    )
-    async function query(tool: string, params: Record<string, unknown>) {
-      const response = await stub.fetch(
-        new Request('https://internal/api/tools/execute', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-User-Id': 'public-studio-reader',
-            'X-App-Action': 'true',
-          },
-          body: JSON.stringify({ tool, params }),
-        }),
-      )
-      return response.json() as Promise<{
-        success: boolean
-        data?: {
-          record?: unknown
-          records?: Envelope<DrawingBatch>[]
-          nextOffset?: number
-        }
-        error?: string
-      }>
-    }
-    const room = await query('records.get', {
+    const query = studioRecordTools(c.env, 'public-studio-reader')
+    const room = await query<{ record?: unknown }>('records.get', {
       collection: 'studios',
       recordId: roomId,
     })
@@ -39,7 +33,7 @@ export function registerStudioRoutes(app: Hono<AppContext>) {
     const batches: Envelope<DrawingBatch>[] = []
     let offset = 0
     for (let page = 0; page < 100; page++) {
-      const result = await query('records.query', {
+      const result = await query<{ records: Envelope<DrawingBatch>[]; nextOffset?: number }>('records.query', {
         collection: 'drawing-batches',
         where: { roomId },
         orderBy: 'createdAt',

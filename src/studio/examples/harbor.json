@@ -1,0 +1,864 @@
+{
+  "slug": "harbor",
+  "title": "Harbor at dawn",
+  "brief": "A quiet coastal harbor in early morning light with layered misty hills, two wooden skiffs, and calm tide reflections.",
+  "style": "Atmospheric maritime watercolor. Warm paper #f8f3e8 with apricot dawn glow, lavender-grey hills, slate navy water, and ochre boat timber.",
+  "batches": [
+    {
+      "label": "Dawn sky and water wash",
+      "marks": [
+        {
+          "id": "harbor-sky-lavender",
+          "type": "path",
+          "layer": 1,
+          "fill": "#b8b4cb",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.35,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4013
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 0 0 L 1000 0 L 1000 200 C 760 215 500 220 240 190 C 120 175 0 185 0 185 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-sky-apricot",
+          "type": "path",
+          "layer": 2,
+          "fill": "#fcd5be",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.45,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4021
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 0 140 C 260 120 540 125 780 115 C 920 110 1000 125 1000 125 L 1000 360 L 0 360 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-sky-gold",
+          "type": "path",
+          "layer": 3,
+          "fill": "#fee5ae",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.42,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4049
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 120 240 C 340 210 680 210 880 235 C 940 270 900 355 780 358 C 560 362 340 362 200 358 C 130 340 100 280 120 240 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-water-base",
+          "type": "path",
+          "layer": 4,
+          "fill": "#8da6b2",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.4,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4057
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 0 345 L 1000 345 L 1000 700 L 0 700 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-water-glow",
+          "type": "path",
+          "layer": 5,
+          "fill": "#fcd6be",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.32,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4079
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 220 350 C 440 345 680 345 820 355 C 840 430 760 540 600 555 C 420 570 300 480 220 430 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-water-foreground",
+          "type": "path",
+          "layer": 6,
+          "fill": "#526e7d",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.35,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4091
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 0 510 C 260 480 540 495 800 470 C 910 460 1000 480 1000 480 L 1000 700 L 0 700 Z",
+          "text": "",
+          "fontSize": 24
+        }
+      ]
+    },
+    {
+      "label": "Distant hills and shoreline",
+      "marks": [
+        {
+          "id": "harbor-hills-far",
+          "type": "path",
+          "layer": 8,
+          "fill": "#9294b0",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.44,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4111
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 0 350 C 140 285 260 265 400 280 C 540 295 640 250 780 265 C 880 275 950 315 1000 335 L 1000 358 L 0 358 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-headland-left",
+          "type": "path",
+          "layer": 10,
+          "fill": "#496366",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.65,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4127
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 0 240 C 70 230 130 250 180 275 C 240 305 300 315 370 340 C 400 350 425 355 440 358 L 440 368 L 0 368 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-headland-right",
+          "type": "path",
+          "layer": 11,
+          "fill": "#566e70",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.58,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4133
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 640 358 C 720 340 820 325 1000 315 L 1000 365 L 640 365 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-shore-reflection",
+          "type": "path",
+          "layer": 12,
+          "fill": "#455e60",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.35,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4139
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 0 365 C 140 365 280 370 410 375 C 380 405 260 415 140 410 C 40 405 0 385 0 365 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-headland-trees",
+          "type": "path",
+          "layer": 14,
+          "fill": "none",
+          "stroke": "#283c38",
+          "strokeWidth": 2.4,
+          "opacity": 0.7,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4153
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 30 242 C 90 250 160 270 240 298 C 300 318 360 338 420 354",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-channel-piling",
+          "type": "line",
+          "layer": 15,
+          "fill": "none",
+          "stroke": "#36281e",
+          "strokeWidth": 2.4,
+          "opacity": 0.82,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4167
+          },
+          "x": 210,
+          "y": 355,
+          "width": 0,
+          "height": 0,
+          "x2": 210,
+          "y2": 395,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        }
+      ]
+    },
+    {
+      "label": "Wooden boats and reflections",
+      "marks": [
+        {
+          "id": "harbor-boat1-reflection-soft",
+          "type": "path",
+          "layer": 18,
+          "fill": "#1e303c",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.38,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4177
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 320 465 C 370 465 470 465 520 465 C 500 520 460 560 410 575 C 365 560 330 520 320 465 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat1-hull-main",
+          "type": "path",
+          "layer": 20,
+          "fill": "#223543",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.84,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4189
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 295 438 C 340 452 430 456 525 442 L 515 464 C 450 478 360 476 315 464 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat1-keel-shadow",
+          "type": "path",
+          "layer": 22,
+          "fill": "#111e28",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.7,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4193
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 312 463 C 365 476 450 476 515 464 C 505 472 450 478 370 476 C 330 474 315 468 312 463 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat1-interior",
+          "type": "path",
+          "layer": 24,
+          "fill": "#ba6735",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.8,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4201
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 300 438 C 345 448 435 450 520 442 C 495 438 425 436 345 436 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat1-sail-bundle",
+          "type": "path",
+          "layer": 26,
+          "fill": "#fcf6e8",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.82,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4209
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 385 438 C 425 430 480 432 525 439 C 510 444 450 444 395 443 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat2-reflection-soft",
+          "type": "path",
+          "layer": 28,
+          "fill": "#283642",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.36,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4217
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 605 425 C 640 425 710 425 735 425 C 720 465 690 495 655 500 C 625 490 610 460 605 425 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat2-hull-main",
+          "type": "path",
+          "layer": 30,
+          "fill": "#ded7c6",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.78,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4229
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 590 408 C 625 418 690 419 735 407 L 728 426 C 685 434 625 433 598 424 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat2-waterline",
+          "type": "path",
+          "layer": 32,
+          "fill": "#394954",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.68,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4241
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 596 422 C 630 430 685 430 728 422 C 720 429 680 433 640 433 C 615 433 600 427 596 422 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat2-trim",
+          "type": "path",
+          "layer": 34,
+          "fill": "#9c3d2e",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.82,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 4247
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 592 407 C 626 414 690 415 732 406 C 716 403 668 402 615 404 Z",
+          "text": "",
+          "fontSize": 24
+        }
+      ]
+    },
+    {
+      "label": "Masts, ripples, and dawn shimmer",
+      "marks": [
+        {
+          "id": "harbor-boat1-mast",
+          "type": "path",
+          "layer": 40,
+          "fill": "none",
+          "stroke": "#36271c",
+          "strokeWidth": 2.8,
+          "opacity": 0.88,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4253
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 405 448 L 398 215",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat1-boom",
+          "type": "path",
+          "layer": 41,
+          "fill": "none",
+          "stroke": "#36271c",
+          "strokeWidth": 2.2,
+          "opacity": 0.82,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4255
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 402 442 L 528 438",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat1-stay-fore",
+          "type": "path",
+          "layer": 42,
+          "fill": "none",
+          "stroke": "#36271c",
+          "strokeWidth": 1.2,
+          "opacity": 0.72,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4259
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 398 220 L 298 440",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat1-halyard",
+          "type": "path",
+          "layer": 43,
+          "fill": "none",
+          "stroke": "#36271c",
+          "strokeWidth": 1.1,
+          "opacity": 0.65,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4261
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 398 230 C 402 300 404 370 405 445",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat2-mast",
+          "type": "path",
+          "layer": 44,
+          "fill": "none",
+          "stroke": "#3e2e22",
+          "strokeWidth": 2,
+          "opacity": 0.84,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4271
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 648 412 L 644 260",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-boat2-stay",
+          "type": "path",
+          "layer": 45,
+          "fill": "none",
+          "stroke": "#3e2e22",
+          "strokeWidth": 1.1,
+          "opacity": 0.65,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4273
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 644 265 L 592 408",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-mooring-rope",
+          "type": "path",
+          "layer": 46,
+          "fill": "none",
+          "stroke": "#453526",
+          "strokeWidth": 1.8,
+          "opacity": 0.75,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4283
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 296 440 C 260 460 230 490 200 530",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-mast-reflection",
+          "type": "path",
+          "layer": 47,
+          "fill": "none",
+          "stroke": "#1c2d38",
+          "strokeWidth": 1.8,
+          "opacity": 0.65,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4291
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 406 475 C 402 510 410 545 404 580 C 408 610 403 640 407 660",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-ripple-boat1-mid",
+          "type": "path",
+          "layer": 48,
+          "fill": "none",
+          "stroke": "#1c2d38",
+          "strokeWidth": 2,
+          "opacity": 0.75,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4297
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 325 488 C 380 494 455 494 515 487",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-ripple-boat1-low",
+          "type": "path",
+          "layer": 49,
+          "fill": "none",
+          "stroke": "#1c2d38",
+          "strokeWidth": 1.8,
+          "opacity": 0.7,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4327
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 350 522 C 395 528 460 528 500 522",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-ripple-boat2",
+          "type": "path",
+          "layer": 50,
+          "fill": "none",
+          "stroke": "#253540",
+          "strokeWidth": 1.8,
+          "opacity": 0.68,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4339
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 605 442 C 638 448 685 448 720 442",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-ripple-foreground-wide",
+          "type": "path",
+          "layer": 52,
+          "fill": "none",
+          "stroke": "#2c4352",
+          "strokeWidth": 2.2,
+          "opacity": 0.7,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4349
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 170 578 C 350 594 610 594 810 574",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-ripple-foreground-bottom",
+          "type": "path",
+          "layer": 53,
+          "fill": "none",
+          "stroke": "#2c4352",
+          "strokeWidth": 2.4,
+          "opacity": 0.72,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4357
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 230 638 C 430 654 570 654 750 634",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-dawn-shimmer-1",
+          "type": "ellipse",
+          "layer": 55,
+          "fill": "#fde09e",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.58,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4363
+          },
+          "x": 540,
+          "y": 375,
+          "width": 50,
+          "height": 7,
+          "x2": 0,
+          "y2": 0,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-dawn-shimmer-2",
+          "type": "ellipse",
+          "layer": 56,
+          "fill": "#fcd390",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.52,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 4367
+          },
+          "x": 480,
+          "y": 405,
+          "width": 35,
+          "height": 6,
+          "x2": 0,
+          "y2": 0,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-gull-1",
+          "type": "path",
+          "layer": 58,
+          "fill": "none",
+          "stroke": "#484456",
+          "strokeWidth": 1.6,
+          "opacity": 0.72,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4373
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 720 160 C 728 153 734 153 740 160 C 746 153 752 153 760 160",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "harbor-gull-2",
+          "type": "path",
+          "layer": 59,
+          "fill": "none",
+          "stroke": "#484456",
+          "strokeWidth": 1.4,
+          "opacity": 0.68,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 4381
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 780 180 C 786 174 790 174 795 180 C 800 174 804 174 810 180",
+          "text": "",
+          "fontSize": 24
+        }
+      ]
+    }
+  ]
+}

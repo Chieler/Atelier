@@ -30,7 +30,11 @@ export const studioSchemas: CollectionSchema[] = [
         maxLength: 3000,
       },
     ],
-    permissions,
+    permissions: {
+      ...permissions,
+      member: { ...permissions.member, delete: 'own' },
+      admin: { ...permissions.admin, delete: 'own' },
+    },
   },
   {
     name: 'drawing-batches',

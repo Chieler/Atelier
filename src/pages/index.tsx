@@ -48,12 +48,12 @@ export default function Landing() {
           <figure className="landing-art">
             <div className="art-mat">
               <img
-                src="/example.svg"
-                alt="A rust-colored fox crossing a moonlit forest ravine, drawn with layered vector shapes"
+                src="/example.svg?v=peach-hibiscus"
+                alt="A peach hibiscus flower painted with layered watercolor washes and detailed stamen"
               />
             </div>
             <figcaption>
-              <span>Moonlit crossing</span>
+              <span>Peach hibiscus</span>
               <span>A saved agent drawing experiment · SVG</span>
             </figcaption>
           </figure>

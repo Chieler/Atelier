@@ -26,6 +26,7 @@ import { tasks as cronTasks, runTask as runCronTask } from './src/cron.js'
 import { runJob } from './src/jobs.js'
 import { schemas } from './src/schemas.js'
 import { registerActionRoutes } from './src/server/action-routes.js'
+import { registerAgentApi } from './src/server/agent-api.js'
 import {
   registerAuthAndIntegrationRoutes,
   registerPlatformProxyRoutes,
@@ -97,6 +98,7 @@ export interface Env extends DOBindings<typeof __DO_MANIFEST__> {
    * headers when it is absent so upstream services fail closed.
    */
   APP_IDENTITY_TOKEN?: string
+  AGENT_INVITE_SECRET?: string
   /** API service binding in production with a deepspace-dev URL fallback. */
   API_WORKER?: Fetcher
   API_WORKER_URL?: string
@@ -139,6 +141,7 @@ registerAuthAndIntegrationRoutes(app)
 registerRealtimeRoutes(app)
 registerActionRoutes(app, resolveAuth)
 registerStudioRoutes(app)
+registerAgentApi(app)
 // Every scaffold exposes selected tools through HTTP, MCP and browser tools.
 // Only copilot owns the collections needed for the in-app chat UI.
 registerAgent(app, {

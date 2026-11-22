@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthOverlay, useAuth, useQuery, useMutations } from 'deepspace'
-import { ArrowUpRight, Plus, X, ArrowRight } from 'lucide-react'
+import { useCopyExample } from '../../studio/useCopyExample'
+import { ArrowUpRight, Plus, X, ArrowRight, Copy, Check } from 'lucide-react'
 import { Header } from '../../studio/Header'
-import {
-  markSchema,
-  ordered,
-  type StudioRoom,
-  type DrawingBatch,
-} from '../../studio/model'
-import example from '../../studio/example.json'
+import { DeleteStudioButton } from '../../studio/DeleteStudioButton'
+import { ordered, type StudioRoom } from '../../studio/model'
+import { examples, exampleImage, type Example } from '../../studio/examples'
 
 export default function Home() {
   const { records: rooms, status } = useQuery<StudioRoom>('studios', {
@@ -17,46 +14,38 @@ export default function Home() {
     orderDir: 'desc',
   })
   const roomWrites = useMutations<StudioRoom>('studios')
-  const batchWrites = useMutations<DrawingBatch>('drawing-batches')
-  const { isSignedIn } = useAuth()
+  const { isSignedIn, userId } = useAuth()
+  // Rooms are public, but the home page only lists your own; strangers' and
+  // test rooms stay reachable by link without cluttering the gallery.
+  const mine = isSignedIn ? ordered(rooms).reverse().filter((r) => r.createdBy === userId) : []
   const navigate = useNavigate()
   const [form, setForm] = useState(false),
     [auth, setAuth] = useState(false)
   const [title, setTitle] = useState(''),
     [brief, setBrief] = useState(''),
     [style, setStyle] = useState('')
-  const [pending, setPending] = useState(false),
+  const [pending, setPending] = useState<string | false>(false),
     [error, setError] = useState('')
-  async function create(seed = false) {
-    setPending(true)
+  const featured = useCopyExample()
+  const copyAction = (example: Example) =>
+    featured.copied[example.slug] ? (
+      <Link className="card-action" to={`/studio/${featured.copied[example.slug]}`}>
+        <Check size={13} /> Copied · Open studio <ArrowRight size={13} />
+      </Link>
+    ) : (
+      <button
+        className="card-action"
+        disabled={!!featured.pending || (isSignedIn && !featured.ready)}
+        onClick={() => (isSignedIn ? void featured.copy(example) : setAuth(true))}
+      >
+        <Copy size={13} /> {featured.pending === example.slug ? 'Copying…' : 'Copy to my studios'}
+      </button>
+    )
+  async function create() {
+    setPending('new')
     setError('')
     try {
-      const data = seed
-        ? {
-            title: 'Moonlit crossing',
-            brief:
-              'A fox leaping across a forest ravine under a full moon. Give the leap a clear silhouette and a sense of height.',
-            style:
-              'Three-ink woodcut. Warm paper #F1E3C6, charcoal #172126, rust #BA4B35. Broad carved cuts and strong negative space. Keep the composition readable at thumbnail size.',
-          }
-        : { title: title.trim(), brief: brief.trim(), style: style.trim() }
-      const id = await roomWrites.createConfirmed(data)
-      if (seed) {
-        const marks = example.map((mark) => markSchema.parse(mark))
-        for (let i = 0; i < marks.length; i += 16)
-          await batchWrites.createConfirmed({
-            roomId: id,
-            label:
-              [
-                'Establish the forest',
-                'Build the crossing',
-                'Carve light and detail',
-              ][Math.floor(i / 16)] ?? 'Refine',
-            operations: JSON.stringify(
-              marks.slice(i, i + 16).map((mark) => ({ op: 'put', mark })),
-            ),
-          })
-      }
+      const id = await roomWrites.createConfirmed({ title: title.trim(), brief: brief.trim(), style: style.trim() })
       navigate(`/studio/${id}`)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Unable to create studio.')
@@ -69,16 +58,7 @@ export default function Home() {
       <main className="studio-home">
         <div className="home-intro">
           <div>
-            <div className="eyebrow">MAKE SOMETHING, TOGETHER</div>
-            <h1>
-              Good work takes
-              <br />
-              <em>a conversation.</em>
-            </h1>
-            <p>
-              A place to brief your drawing agents, watch their work unfold,
-              <br className="desktop-break" /> and shape the next mark.
-            </p>
+            <h1>Drawing studios</h1>
           </div>
           <div className="intro-actions">
             <button
@@ -87,40 +67,51 @@ export default function Home() {
             >
               <Plus size={17} /> New studio
             </button>
-            <span>
-              One brief. A shared canvas.
-              <br />
-              As many passes as it takes.
-            </span>
           </div>
         </div>
         <div className="section-heading">
           <h2>
-            The studios <span>{rooms.length.toString().padStart(2, '0')}</span>
+            Featured <span>{examples.length}</span>
           </h2>
-          <span>Open rooms · Shared with everyone</span>
+          <span>Curated agent paintings · copy one into your studios</span>
         </div>
-        {status === 'loading' ? (
+        <div className="room-grid featured-grid">
+          {examples.map((example) => (
+            <article className="room-card" key={example.slug}>
+              <Link to={`/featured/${example.slug}`}>
+                <div className="room-preview">
+                  <img src={exampleImage(example)} alt={`Painting: ${example.title}`} loading="lazy" width={1000} height={700} />
+                  <span className="card-arrow">
+                    <ArrowUpRight size={19} />
+                  </span>
+                </div>
+                <div className="card-detail">
+                  <h3>{example.title}</h3>
+                  <p>{example.brief}</p>
+                </div>
+              </Link>
+              <div className="card-copy">{copyAction(example)}</div>
+            </article>
+          ))}
+        </div>
+        <div className="section-heading">
+          <h2>
+            Your studios {isSignedIn && <span>{mine.length}</span>}
+          </h2>
+        </div>
+        {isSignedIn && status === 'loading' ? (
           <div className="page-state">Loading studios…</div>
         ) : (
           <div className="room-grid">
-            {ordered(rooms)
-              .reverse()
-              .map((room, i) => (
-                <Link
-                  className="room-card"
-                  key={room.recordId}
-                  to={`/studio/${room.recordId}`}
-                >
+            {mine.map((room) => (
+              <article className="room-card" key={room.recordId}>
+                <Link to={`/studio/${room.recordId}`}>
                   <div className="room-preview">
                     <img
                       loading="lazy"
                       src={`/api/studios/${room.recordId}/view.svg`}
                       alt={`Preview of ${room.data.title}`}
                     />
-                    <span className="card-index">
-                      STUDIO {String(i + 1).padStart(2, '0')}
-                    </span>
                     <span className="card-arrow">
                       <ArrowUpRight size={19} />
                     </span>
@@ -133,7 +124,9 @@ export default function Home() {
                     </span>
                   </div>
                 </Link>
-              ))}
+                <DeleteStudioButton studio={room} iconOnly />
+              </article>
+            ))}
             <button
               className="new-room-card"
               onClick={() => (isSignedIn ? setForm(true) : setAuth(true))}
@@ -141,43 +134,21 @@ export default function Home() {
               <span className="new-plus">
                 <Plus size={25} />
               </span>
-              <h3>A blank canvas awaits.</h3>
+              <h3>New studio</h3>
               <p>
-                Start with a direction.
-                <br />
-                Invite an agent to explore it.
+                {isSignedIn
+                  ? 'Write a brief and invite a drawing agent.'
+                  : 'Sign in to start a studio and invite a drawing agent.'}
               </p>
             </button>
           </div>
         )}
-        <div className="example-strip">
-          <div>
-            <span className="eyebrow">FROM THE DRAWING EXPERIMENTS</span>
-            <h3>See how a room works.</h3>
-            <p>
-              Open an editable copy of our fox illustration, with three
-              replayable batches. This is a saved example, not a live agent run.
-            </p>
-          </div>
-          <button
-            className="outline-button"
-            disabled={
-              pending ||
-              (isSignedIn && (!roomWrites.ready || !batchWrites.ready))
-            }
-            onClick={() => (isSignedIn ? void create(true) : setAuth(true))}
-          >
-            {pending ? 'Preparing…' : 'Open the example'}{' '}
-            <ArrowUpRight size={15} />
-          </button>
-        </div>
-        {error && (
+        {(error || featured.error) && (
           <p role="alert" className="error-text">
-            {error}
+            {error || featured.error}
           </p>
         )}
         <footer className="home-footer">
-          <span>Made for the space between idea and image.</span>
           <span>Powered by DeepSpace</span>
         </footer>
       </main>
@@ -204,7 +175,6 @@ export default function Home() {
             >
               <X size={20} />
             </button>
-            <div className="eyebrow">A NEW DIRECTION</div>
             <h2 id="new-title">Set the scene.</h2>
             <p>
               Your brief is the starting point. The conversation takes it from
@@ -252,7 +222,7 @@ export default function Home() {
             <button
               className="dark-button"
               disabled={
-                pending ||
+                !!pending ||
                 !roomWrites.ready ||
                 !title.trim() ||
                 !brief.trim() ||

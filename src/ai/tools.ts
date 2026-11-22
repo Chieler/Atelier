@@ -1,8 +1,14 @@
 import { tool, type ToolSet } from 'ai'
 import { z } from 'zod'
 import type { UserToolExecutor } from 'deepspace/worker'
-import { batchSchema } from '../studio/model'
+import { paintBatchSchema } from '../studio/model'
 const roomId = z.string().min(1).max(100)
+export const studioPaintSchema = z.object({
+  label: z.string().min(1).max(120),
+  operations: paintBatchSchema,
+})
+export const studioCommentSchema = z.object({ body: z.string().min(1).max(2000) })
+export const MAX_ENCODED_PAINT_LENGTH = 60000
 export function buildSystemPrompt(..._context: unknown[]): string {
   return 'You draw in Atelier. Read the brief and feedback first. Submit small labelled batches, inspect the image between passes, preserve other contributors’ work, and report what you actually verified.'
 }
@@ -46,16 +52,12 @@ export function buildTools(executor: UserToolExecutor): ToolSet {
     }),
     studio_paint: tool({
       description:
-        'Append 1–50 validated SVG operations as one revision. put creates or replaces a stable mark ID; delete removes it. Use agent-prefixed IDs to avoid overwriting collaborators. Paths use SVG d syntax. No raw markup, URLs or images. Solid hex colors only. Layer 0 is behind layer 99. Label each batch by intent and inspect the view after each pass.',
-      inputSchema: z.object({
-        roomId,
-        label: z.string().min(1).max(120),
-        operations: batchSchema,
-      }),
+        'Publish 1–50 validated drawing operations as one revision. Send small labelled batches as you work so viewers can follow along. put creates or replaces a stable mark ID; delete removes it. Use agent-prefixed IDs. To use textured brushes, set brush to {preset, seed}: preset is wet-wash, dry-brush, pigment-bleed (watercolors), or oil, gouache, ink, pastel (opaque/textured media), and seed is a nonnegative integer. Vary seeds between marks and keep a mark’s seed when revising it. Paths use SVG d syntax. Use hex colors, opacity, and layers from 0 to 99. Inspect the rendered view between passes.',
+      inputSchema: studioPaintSchema.extend({ roomId }),
       execute: async ({ roomId: id, label, operations }) => {
         await requireRoom(id)
         const encoded = JSON.stringify(operations)
-        if (encoded.length > 60000)
+        if (encoded.length > MAX_ENCODED_PAINT_LENGTH)
           throw new Error('Batch too large; use fewer or simpler paths')
         return executor('records.create', {
           collection: 'drawing-batches',
@@ -66,7 +68,7 @@ export function buildTools(executor: UserToolExecutor): ToolSet {
     studio_comment: tool({
       description:
         'Post a question, plan or response to feedback in the room conversation.',
-      inputSchema: z.object({ roomId, body: z.string().min(1).max(2000) }),
+      inputSchema: studioCommentSchema.extend({ roomId }),
       execute: async ({ roomId: id, body }) => {
         await requireRoom(id)
         return executor('records.create', {

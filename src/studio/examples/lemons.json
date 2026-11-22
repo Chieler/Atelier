@@ -1,0 +1,842 @@
+{
+  "slug": "lemons",
+  "title": "Three lemons on linen",
+  "brief": "A sunlit still life of three ripe lemons clustered with fresh orchard leaves on pale draped linen.",
+  "style": "Loose Mediterranean watercolor. Warm paper #f8f3e8 with luminous cadmium and chartreuse yellows, olive greens, and soft violet shadows.",
+  "batches": [
+    {
+      "label": "Linen folds and cast shadows",
+      "marks": [
+        {
+          "id": "lemons-linen-wash",
+          "type": "path",
+          "layer": 1,
+          "fill": "#ede5d8",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.38,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3109
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 100 440 C 240 370 480 380 720 370 C 880 360 940 430 920 580 C 890 680 720 680 480 670 C 260 660 100 620 80 540 C 60 470 70 450 100 440 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-linen-fold",
+          "type": "path",
+          "layer": 2,
+          "fill": "#dbcebe",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.28,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3121
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 140 540 C 300 500 520 510 740 480 C 850 465 890 500 840 550 C 700 590 460 600 270 590 C 180 585 130 565 140 540 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-shadow-diffuse",
+          "type": "path",
+          "layer": 4,
+          "fill": "#847989",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.22,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3137
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 210 475 C 330 435 550 435 730 455 C 800 485 780 545 670 565 C 500 585 320 575 220 540 C 175 515 180 490 210 475 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-shadow-contact-left",
+          "type": "path",
+          "layer": 5,
+          "fill": "#433748",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.44,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3151
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 260 480 C 330 470 410 480 435 500 C 400 525 330 525 270 510 C 245 498 245 485 260 480 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-shadow-contact-right",
+          "type": "path",
+          "layer": 6,
+          "fill": "#433748",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.44,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3167
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 505 485 C 580 475 665 485 690 505 C 660 530 590 535 525 520 C 495 505 495 490 505 485 Z",
+          "text": "",
+          "fontSize": 24
+        }
+      ]
+    },
+    {
+      "label": "Foliage and leaves",
+      "marks": [
+        {
+          "id": "lemons-sprig-stem",
+          "type": "path",
+          "layer": 8,
+          "fill": "none",
+          "stroke": "#584027",
+          "strokeWidth": 4,
+          "opacity": 0.82,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3181
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 290 170 C 330 200 380 235 430 265 C 455 280 480 288 505 290",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-leaf-back",
+          "type": "path",
+          "layer": 9,
+          "fill": "#29431e",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.72,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3191
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 410 260 C 435 175 390 115 330 85 C 295 145 305 225 385 275 C 398 280 405 275 410 260 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-leaf-left",
+          "type": "path",
+          "layer": 10,
+          "fill": "#466832",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.65,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3203
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 360 230 C 275 190 170 215 120 265 C 160 315 255 315 325 270 C 345 255 355 240 360 230 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-leaf-center",
+          "type": "path",
+          "layer": 11,
+          "fill": "#587e3c",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.62,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3217
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 425 260 C 455 190 520 145 600 140 C 610 200 575 255 485 280 C 455 288 435 278 425 260 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-leaf-right",
+          "type": "path",
+          "layer": 12,
+          "fill": "#5b823e",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.6,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3233
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 500 255 C 570 205 660 205 735 235 C 720 290 645 315 560 285 C 525 273 510 263 500 255 Z",
+          "text": "",
+          "fontSize": 24
+        }
+      ]
+    },
+    {
+      "label": "Lemon forms and warm midtones",
+      "marks": [
+        {
+          "id": "lemons-fruit-back-wash",
+          "type": "path",
+          "layer": 15,
+          "fill": "#fef18f",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.52,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3251
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 440 330 C 430 250 480 200 540 210 C 600 220 630 290 620 370 C 610 440 540 450 480 430 C 445 410 435 370 440 330 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-back-body",
+          "type": "path",
+          "layer": 16,
+          "fill": "#f7d032",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.74,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3257
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 445 330 C 435 255 485 205 540 215 C 595 225 620 290 610 365 C 600 435 540 445 485 425 C 450 405 440 365 445 330 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-back-shade",
+          "type": "path",
+          "layer": 17,
+          "fill": "#c68412",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.52,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3271
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 460 310 C 490 345 550 350 580 310 C 588 335 555 365 505 360 C 475 355 455 330 460 310 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-back-nipple",
+          "type": "path",
+          "layer": 18,
+          "fill": "#a3b734",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.58,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3299
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 530 205 C 538 190 548 190 555 205 C 548 212 538 212 530 205 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-left-wash",
+          "type": "path",
+          "layer": 20,
+          "fill": "#fff296",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.55,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3307
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 240 415 C 220 380 250 320 320 300 C 400 280 470 330 480 395 C 490 470 420 510 340 500 C 260 490 230 450 240 415 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-left-body",
+          "type": "path",
+          "layer": 22,
+          "fill": "#f7cb28",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.76,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3319
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 235 410 C 220 375 255 315 325 305 C 400 290 465 335 470 400 C 475 465 415 505 340 495 C 265 485 230 445 235 410 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-left-tip",
+          "type": "path",
+          "layer": 23,
+          "fill": "#afc036",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.6,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3323
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 220 405 C 205 395 205 385 215 380 C 228 375 235 395 220 405 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-left-shade",
+          "type": "path",
+          "layer": 24,
+          "fill": "#cb8611",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.58,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3331
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 265 455 C 315 490 395 485 435 440 C 445 475 395 505 325 500 C 280 495 255 475 265 455 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-left-glow",
+          "type": "path",
+          "layer": 25,
+          "fill": "#fffbd1",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.45,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3343
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 290 360 C 310 325 360 320 395 335 C 410 360 380 385 340 385 C 310 385 285 375 290 360 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-right-wash",
+          "type": "path",
+          "layer": 27,
+          "fill": "#feee86",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.52,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3359
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 480 410 C 485 340 550 310 630 330 C 700 355 730 425 700 485 C 660 540 570 535 515 495 C 485 465 480 435 480 410 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-right-body",
+          "type": "path",
+          "layer": 29,
+          "fill": "#f6ca26",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.76,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3371
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 485 415 C 490 345 555 315 625 335 C 695 360 720 425 695 480 C 655 530 575 525 520 490 C 490 465 485 435 485 415 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-right-shade",
+          "type": "path",
+          "layer": 31,
+          "fill": "#c68310",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.6,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3389
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 525 470 C 580 505 660 495 685 450 C 695 485 645 525 575 520 C 530 515 510 490 525 470 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-right-tip",
+          "type": "path",
+          "layer": 32,
+          "fill": "#a0b530",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.55,
+          "brush": {
+            "preset": "pigment-bleed",
+            "seed": 3391
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 705 425 C 725 430 730 442 715 450 C 702 445 698 435 705 425 Z",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-fruit-right-glow",
+          "type": "path",
+          "layer": 33,
+          "fill": "#fffcdb",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.42,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3407
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 540 375 C 560 340 610 340 640 360 C 650 385 620 405 580 400 C 550 400 535 390 540 375 Z",
+          "text": "",
+          "fontSize": 24
+        }
+      ]
+    },
+    {
+      "label": "Veins, dry-brush contours, and accents",
+      "marks": [
+        {
+          "id": "lemons-vein-left",
+          "type": "path",
+          "layer": 40,
+          "fill": "none",
+          "stroke": "#223816",
+          "strokeWidth": 2.2,
+          "opacity": 0.82,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3413
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 340 255 C 275 245 205 250 145 260",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-vein-center",
+          "type": "path",
+          "layer": 41,
+          "fill": "none",
+          "stroke": "#28421c",
+          "strokeWidth": 2,
+          "opacity": 0.8,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3433
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 445 270 C 490 220 545 180 595 150",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-vein-back",
+          "type": "path",
+          "layer": 42,
+          "fill": "none",
+          "stroke": "#1c3013",
+          "strokeWidth": 1.8,
+          "opacity": 0.78,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3449
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 390 260 C 365 200 345 155 330 100",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-vein-right",
+          "type": "path",
+          "layer": 43,
+          "fill": "none",
+          "stroke": "#28421c",
+          "strokeWidth": 1.8,
+          "opacity": 0.75,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3451
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 525 265 C 585 240 650 235 715 245",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-contour-left",
+          "type": "path",
+          "layer": 45,
+          "fill": "none",
+          "stroke": "#99630e",
+          "strokeWidth": 2.2,
+          "opacity": 0.68,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3457
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 220 395 C 230 335 290 300 365 305 C 410 312 435 330 450 360",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-contour-right",
+          "type": "path",
+          "layer": 46,
+          "fill": "none",
+          "stroke": "#96600c",
+          "strokeWidth": 2.2,
+          "opacity": 0.68,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3461
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 500 365 C 540 325 615 320 670 345 C 710 375 715 435 695 475",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-contour-back",
+          "type": "path",
+          "layer": 47,
+          "fill": "none",
+          "stroke": "#8a5608",
+          "strokeWidth": 1.8,
+          "opacity": 0.6,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3463
+          },
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "x2": 0,
+          "y2": 0,
+          "d": "M 455 270 C 485 220 545 215 585 240 C 605 265 608 300 600 335",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-calyx-left",
+          "type": "ellipse",
+          "layer": 50,
+          "fill": "#4a3215",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.88,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3467
+          },
+          "x": 212,
+          "y": 390,
+          "width": 6,
+          "height": 5,
+          "x2": 0,
+          "y2": 0,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-calyx-right",
+          "type": "ellipse",
+          "layer": 51,
+          "fill": "#4a3215",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.88,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3469
+          },
+          "x": 720,
+          "y": 440,
+          "width": 6,
+          "height": 5,
+          "x2": 0,
+          "y2": 0,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-calyx-back",
+          "type": "ellipse",
+          "layer": 52,
+          "fill": "#422c10",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.85,
+          "brush": {
+            "preset": "dry-brush",
+            "seed": 3491
+          },
+          "x": 544,
+          "y": 198,
+          "width": 5,
+          "height": 4,
+          "x2": 0,
+          "y2": 0,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-spatter-lemon",
+          "type": "ellipse",
+          "layer": 54,
+          "fill": "#f5c826",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.52,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3499
+          },
+          "x": 180,
+          "y": 460,
+          "width": 8,
+          "height": 7,
+          "x2": 0,
+          "y2": 0,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-spatter-amber",
+          "type": "ellipse",
+          "layer": 55,
+          "fill": "#c88612",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.48,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3511
+          },
+          "x": 750,
+          "y": 525,
+          "width": 7,
+          "height": 6,
+          "x2": 0,
+          "y2": 0,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        },
+        {
+          "id": "lemons-spatter-leaf",
+          "type": "ellipse",
+          "layer": 56,
+          "fill": "#486934",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "opacity": 0.42,
+          "brush": {
+            "preset": "wet-wash",
+            "seed": 3517
+          },
+          "x": 615,
+          "y": 130,
+          "width": 6,
+          "height": 6,
+          "x2": 0,
+          "y2": 0,
+          "d": "",
+          "text": "",
+          "fontSize": 24
+        }
+      ]
+    }
+  ]
+}
